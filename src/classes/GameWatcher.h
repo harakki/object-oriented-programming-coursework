@@ -7,7 +7,7 @@
 
 
 class GameWatcher {
-
+// TODO: Класс
 };
 
 

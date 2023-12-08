@@ -7,7 +7,7 @@
 
 
 class GameSettings {
-
+// TODO: Класс
 };
 
 

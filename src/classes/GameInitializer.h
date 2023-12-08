@@ -7,7 +7,7 @@
 
 
 class GameInitializer {
-
+// TODO: Класс
 };
 
 

@@ -6,8 +6,20 @@
 #define OOP_COURSEWORK_GAMEMANAGER_H
 
 
-class GameManager {
+#include "Board.h"
+#include "Player.h"
 
+class GameManager {
+public:
+    GameManager(int X, int Y);
+
+    void runGame();
+
+private:
+    short moveOwner; // Определяет, чей ход будет сейчас
+    Board *gameBoard;
+    Player *player1;
+    Player *player2;
 };
 
 

@@ -7,7 +7,7 @@
 
 
 class MoveProcessor {
-
+// TODO: Класс
 };
 
 
