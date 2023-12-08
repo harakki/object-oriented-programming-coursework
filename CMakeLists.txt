@@ -4,8 +4,6 @@ project(OOP_coursework)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(OOP_coursework src/main.cpp
-        src/classes/Object.cpp
-        src/classes/Object.h
         src/classes/Entity.cpp
         src/classes/Entity.h
         src/classes/Player.cpp
@@ -21,4 +19,5 @@ add_executable(OOP_coursework src/main.cpp
         src/classes/GameInitializer.cpp
         src/classes/GameInitializer.h
         src/classes/GameSettings.cpp
-        src/classes/GameSettings.h)
+        src/classes/GameSettings.h
+)
