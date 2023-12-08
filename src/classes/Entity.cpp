@@ -3,3 +3,9 @@
 //
 
 #include "Entity.h"
+
+int Entity::getOwner() const {
+    return owner;
+}
+
+Entity::Entity(short owner) : owner(owner) {}

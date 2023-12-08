@@ -6,8 +6,23 @@
 #define OOP_COURSEWORK_PLAYER_H
 
 
-class Player {
+#include "Entity.h"
 
+class Player : Entity {
+public:
+    int getScore() const;
+
+    void addScore(int score);
+
+    int getMoves() const;
+
+    void addMove();
+
+    Player(short playerNumber);
+
+private:
+    int score; // Количество заработанных очков
+    int moves; // Количество выполненных ходов
 };
 
 

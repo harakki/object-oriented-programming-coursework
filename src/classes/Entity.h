@@ -7,7 +7,13 @@
 
 
 class Entity {
+public:
+    int getOwner() const;
 
+    explicit Entity(short owner);
+
+private:
+    short owner; // Номер владельца (0: наблюдатель)
 };
 
 
