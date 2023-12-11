@@ -7,7 +7,18 @@
 
 
 class GameSettings {
-// TODO: Класс
+public:
+    int getBoardSizeX() const;
+
+    void setBoardSizeX(int length);
+
+    int getBoardSizeY() const;
+
+    void setBoardSizeY(int length);
+
+private:
+    int boardSizeX = 15;
+    int boardSizeY = 15;
 };
 
 

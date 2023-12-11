@@ -10,14 +10,10 @@ add_executable(OOP_coursework src/main.cpp
         src/classes/Player.h
         src/classes/Board.cpp
         src/classes/Board.h
-        src/classes/MoveProcessor.cpp
-        src/classes/MoveProcessor.h
-        src/classes/GameWatcher.cpp
-        src/classes/GameWatcher.h
+        src/classes/Gameplay.cpp
+        src/classes/Gameplay.h
         src/classes/GameManager.cpp
         src/classes/GameManager.h
-        src/classes/GameInitializer.cpp
-        src/classes/GameInitializer.h
         src/classes/GameSettings.cpp
         src/classes/GameSettings.h
 )

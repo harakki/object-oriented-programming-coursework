@@ -11,14 +11,18 @@
 
 class GameManager {
 public:
-    GameManager(int X, int Y, short startingPlayer);
+    explicit GameManager(int X, int Y, short startingPlayer);
 
     int runMove(int X, int Y);
 
-    void printBoard();
+    void printBoard() const;
+
+    int getCell(int x, int y) const;
+
+    short getCurrentPlayerNumber() const;
 
 protected:
-    int searchForWin();
+    int searchForWin() const;
 
     bool checkCombination(int startX, int startY, int deltaX, int deltaY, int combinationLength, int digit) const;
 

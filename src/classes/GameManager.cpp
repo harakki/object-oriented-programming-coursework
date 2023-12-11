@@ -5,8 +5,7 @@
 #include <iostream>
 #include "GameManager.h"
 
-GameManager::GameManager(int X, int Y, short startingPlayer) {
-    GameManager::currentPlayerNumber = startingPlayer;
+GameManager::GameManager(int X, int Y, short startingPlayer) : currentPlayerNumber(startingPlayer) {
     GameManager::gameBoard = std::make_unique<Board>(X, Y);
     GameManager::player1 = std::make_unique<Player>(1);
     GameManager::player2 = std::make_unique<Player>(2);
@@ -26,11 +25,11 @@ int GameManager::runMove(int X, int Y) {
     return 0;
 }
 
-void GameManager::printBoard() {
+void GameManager::printBoard() const {
     GameManager::gameBoard->printInText();
 }
 
-int GameManager::searchForWin() {
+int GameManager::searchForWin() const {
     int combinationLength = 5; // Минимально необходимая длина комбинации для победы
 
     for (auto x = 0; x < gameBoard->getSizeX(); ++x) {
@@ -76,4 +75,12 @@ GameManager::checkCombination(int startX, int startY, int deltaX, int deltaY, in
         return true;
     }
     return false;
+}
+
+int GameManager::getCell(int x, int y) const {
+    return gameBoard->getCell(x, y);
+}
+
+short GameManager::getCurrentPlayerNumber() const {
+    return currentPlayerNumber;
 }
