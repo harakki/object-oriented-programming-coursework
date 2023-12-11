@@ -6,9 +6,9 @@
 #include "Board.h"
 
 Board::Board(int sizeX, int sizeY) : sizeX(sizeX), sizeY(sizeY) {
-    cell = new int *[sizeX];
+    cell = std::make_unique<std::unique_ptr<int[]>[]>(sizeX);
     for (int x = 0; x < sizeX; ++x) {
-        cell[x] = new int[sizeY]();
+        cell[x] = std::make_unique<int[]>(sizeY);
     }
 }
 

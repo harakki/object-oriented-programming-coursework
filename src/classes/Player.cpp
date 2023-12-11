@@ -8,13 +8,11 @@ int Player::getScore() const {
     return score;
 }
 
-void Player::addScore(int score) {
-    Player::score += score;
+void Player::addScore(int quantity) {
+    Player::score += quantity;
 }
 
 Player::Player(short playerNumber) : Entity(playerNumber) {
-    Player::score = 0;
-    Player::moves = 0;
 }
 
 int Player::getMoves() const {

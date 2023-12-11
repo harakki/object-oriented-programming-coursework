@@ -12,17 +12,17 @@ class Player : public Entity {
 public:
     int getScore() const;
 
-    void addScore(int score);
+    void addScore(int quantity);
 
     int getMoves() const;
 
     void addMove();
 
-    Player(short playerNumber);
+    explicit Player(short playerNumber);
 
 private:
-    int score; // Количество заработанных очков
-    int moves; // Количество выполненных ходов
+    int score = 0; // Количество заработанных очков
+    int moves = 0; // Количество выполненных ходов
 };
 
 

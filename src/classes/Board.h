@@ -23,7 +23,7 @@ public:
 private:
     int sizeX;
     int sizeY;
-    int **cell;
+    std::unique_ptr<std::unique_ptr<int[]>[]> cell;
 };
 
 
