@@ -8,7 +8,7 @@
 
 #include "Entity.h"
 
-class Player : Entity {
+class Player : public Entity {
 public:
     int getScore() const;
 

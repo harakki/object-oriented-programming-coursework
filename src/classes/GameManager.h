@@ -11,15 +11,22 @@
 
 class GameManager {
 public:
-    GameManager(int X, int Y);
+    GameManager(int X, int Y, short startingPlayer);
 
-    void runGame();
+    int runMove(int X, int Y);
+
+    void printBoard();
+
+protected:
+    int searchForWin();
+
+    bool checkCombination(int startX, int startY, int deltaX, int deltaY, int combinationLength, int digit) const;
 
 private:
-    short moveOwner; // Определяет, чей ход будет сейчас
-    Board *gameBoard;
-    Player *player1;
-    Player *player2;
+    short currentPlayerNumber;
+    std::unique_ptr<Board> gameBoard;
+    std::unique_ptr<Player> player1;
+    std::unique_ptr<Player> player2;
 };
 
 

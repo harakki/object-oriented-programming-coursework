@@ -16,10 +16,9 @@ public:
 
     int getCell(int X, int Y) const;
 
-    void setCell(int X, int Y);
+    void setCell(int X, int Y, short moveOwner) const;
 
-protected:
-    void printInText();
+    void printInText() const;
 
 private:
     int sizeX;
